@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Service — TikBack</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --primary: #1A3FBA;
+    --accent:  #00C2FF;
+    --dark:    #0A0F2E;
+    --light:   #F4F7FF;
+    --text:    #1E1E2E;
+    --muted:   #6B7280;
+    --border:  #E5EAFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.75;
+  }
+
+  header {
+    background: var(--dark);
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  .badge {
+    background: var(--primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    padding: 64px 40px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(0,194,255,0.08);
+    top: -100px; right: -100px;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(0,194,255,0.06);
+    bottom: -80px; left: -80px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero p {
+    color: rgba(255,255,255,0.65);
+    margin-top: 12px;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .toc {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    box-shadow: 0 4px 24px rgba(26,63,186,0.06);
+  }
+
+  .toc h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    padding-left: 20px;
+  }
+
+  .toc li {
+    margin-bottom: 8px;
+  }
+
+  .toc a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .toc a:hover { color: var(--accent); }
+
+  section {
+    margin-bottom: 44px;
+    scroll-margin-top: 100px;
+  }
+
+  section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .num {
+    background: var(--primary);
+    color: #fff;
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  section p {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+
+  section ul, section ol {
+    padding-left: 22px;
+    margin-bottom: 12px;
+  }
+
+  section li {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #EEF2FF, #E0EAFF);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 13px;
+  }
+
+  footer strong {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 20px; }
+    .hero  { padding: 48px 20px 40px; }
+    .toc   { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TIK<span>BACK</span></div>
+  <span class="badge">Real Cashback</span>
+</header>
+
+<div class="hero">
+  <h1>Terms of Service</h1>
+  <p>Effective Date: May 21, 2026 &nbsp;·&nbsp; Last Updated: May 21, 2026</p>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Description of Service</a></li>
+      <li><a href="#s3">Eligibility</a></li>
+      <li><a href="#s4">User Account</a></li>
+      <li><a href="#s5">Cashback Program</a></li>
+      <li><a href="#s6">TikTok Shop Integration</a></li>
+      <li><a href="#s7">Prohibited Activities</a></li>
+      <li><a href="#s8">Intellectual Property</a></li>
+      <li><a href="#s9">Disclaimer of Warranties</a></li>
+      <li><a href="#s10">Limitation of Liability</a></li>
+      <li><a href="#s11">Termination</a></li>
+      <li><a href="#s12">Changes to Terms</a></li>
+      <li><a href="#s13">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
+    <h2><span class="num">1</span> Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the TikBack mobile application ("App") or any related services provided by TATANG TARIA EDI ("TikBack", "we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms").</p>
+    <p>If you do not agree to these Terms, please do not use our App or services.</p>
+  </section>
+
+  <section id="s2">
+    <h2><span class="num">2</span> Description of Service</h2>
+    <p>TikBack is a cashback platform that enables users in Indonesia to earn cashback rewards when purchasing products through TikTok Shop via affiliate tracking links. Our services include:</p>
+    <ul>
+      <li>Generation of affiliate tracking links for TikTok Shop products</li>
+      <li>Tracking of purchases made through affiliate links</li>
+      <li>Calculation and distribution of cashback rewards to user wallets</li>
+      <li>Withdrawal of cashback balance to DANA digital wallet</li>
+    </ul>
+  </section>
+
+  <section id="s3">
+    <h2><span class="num">3</span> Eligibility</h2>
+    <p>To use TikBack, you must:</p>
+    <ul>
+      <li>Be at least 17 years of age</li>
+      <li>Be a resident of Indonesia</li>
+      <li>Have a valid TikTok account and/or TikTok Shop access</li>
+      <li>Have a valid DANA digital wallet account for cashback withdrawal</li>
+      <li>Provide accurate and truthful registration information</li>
+    </ul>
+  </section>
+
+  <section id="s4">
+    <h2><span class="num">4</span> User Account</h2>
+    <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized use of your account. TikBack will not be liable for any loss resulting from unauthorized access to your account.</p>
+    <div class="highlight-box">
+      One account per user is permitted. Creating multiple accounts to abuse the cashback program is strictly prohibited and will result in permanent suspension.
+    </div>
+  </section>
+
+  <section id="s5">
+    <h2><span class="num">5</span> Cashback Program</h2>
+    <p>Cashback rewards are subject to the following conditions:</p>
+    <ul>
+      <li>Cashback is only awarded for purchases made through TikBack affiliate links</li>
+      <li>Cashback amounts are determined by TikTok Shop's affiliate commission rates and may vary by product and seller</li>
+      <li>Cashback is credited to your TikBack wallet within approximately 7–30 days after the purchase is confirmed and the return/refund window has passed</li>
+      <li>Cancelled or returned orders are not eligible for cashback</li>
+      <li>Minimum withdrawal amount may apply</li>
+      <li>TikBack reserves the right to modify cashback rates at any time without prior notice</li>
+    </ul>
+  </section>
+
+  <section id="s6">
+    <h2><span class="num">6</span> TikTok Shop Integration</h2>
+    <p>TikBack integrates with TikTok Shop's Affiliate Partner API to provide affiliate link generation and conversion tracking. By using TikBack, you acknowledge that:</p>
+    <ul>
+      <li>TikBack is an independent affiliate partner and is not affiliated with, endorsed by, or sponsored by TikTok or ByteDance Ltd.</li>
+      <li>TikTok Shop's own terms of service and privacy policy apply to all purchases made on TikTok Shop</li>
+      <li>Cashback availability depends on the seller's participation in TikTok Shop's affiliate program</li>
+    </ul>
+  </section>
+
+  <section id="s7">
+    <h2><span class="num">7</span> Prohibited Activities</h2>
+    <p>Users are prohibited from:</p>
+    <ul>
+      <li>Submitting fraudulent purchase links or false transaction data</li>
+      <li>Manipulating the cashback system through self-referrals or artificial transactions</li>
+      <li>Using bots, scripts, or automated tools to interact with the App</li>
+      <li>Sharing, selling, or transferring cashback balances to other users</li>
+      <li>Violating any applicable laws or regulations</li>
+      <li>Attempting to reverse-engineer or tamper with the App</li>
+    </ul>
+  </section>
+
+  <section id="s8">
+    <h2><span class="num">8</span> Intellectual Property</h2>
+    <p>All content, features, and functionality of the TikBack App — including but not limited to design, graphics, logos, and software — are the exclusive property of TATANG TARIA EDI and are protected by applicable intellectual property laws.</p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="num">9</span> Disclaimer of Warranties</h2>
+    <p>TikBack is provided on an "as is" and "as available" basis without warranties of any kind. We do not guarantee that the App will be uninterrupted, error-free, or that cashback will always be available for every product on TikTok Shop.</p>
+  </section>
+
+  <section id="s10">
+    <h2><span class="num">10</span> Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, TikBack shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including but not limited to loss of cashback rewards due to system errors, TikTok Shop policy changes, or network issues.</p>
+  </section>
+
+  <section id="s11">
+    <h2><span class="num">11</span> Termination</h2>
+    <p>We reserve the right to suspend or terminate your account at any time if you violate these Terms. Upon termination, any pending cashback may be forfeited if the account was found to have engaged in fraudulent activity.</p>
+  </section>
+
+  <section id="s12">
+    <h2><span class="num">12</span> Changes to Terms</h2>
+    <p>TikBack reserves the right to update these Terms at any time. Continued use of the App after changes are posted constitutes acceptance of the new Terms. We will notify users of significant changes through the App.</p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="num">13</span> Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <ul>
+      <li><strong>Company:</strong> TATANG TARIA EDI</li>
+      <li><strong>Brand:</strong> TikBack: Real Cashback</li>
+      <li><strong>Location:</strong> Tasikmalaya, West Java, Indonesia</li>
+      <li><strong>Business Reg. No.:</strong> 2404260041189</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 <strong>TikBack: Real Cashback</strong> · TATANG TARIA EDI · Indonesia</p>
+  <p style="margin-top:6px">These Terms of Service were last updated on May 21, 2026</p>
+</footer>
+
+</body>
+</html>
